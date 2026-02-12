@@ -7,7 +7,7 @@ body {
 }
 
 input {
-  width: 140%;
+  width: 90%;
   padding: 10px;
   margin-bottom: 10px;
   background: #fafafa;
@@ -15,7 +15,7 @@ input {
 }
 
 button {
-  width: 150%;
+  width: 100%;
   padding: 10px;
   background: #0095f6;
   border: none;
@@ -24,24 +24,14 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-
-
-.c {
-text-align: center;
-  margin: 10%;
-  color: #999;
-}
-
 .d {
-    width: 300%;
-    text-align: center;
+    margin-left: 100px;
   color: #385185;
   font-weight: bold;
   cursor: pointer;
 }
 .e{
-    width: 300%;
-    text-align: center;
+    margin-left: 100px;
     color: #0095f6;
     font-weight: bold;
     cursor: pointer;
