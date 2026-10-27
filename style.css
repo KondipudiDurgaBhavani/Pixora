@@ -452,3 +452,43 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+/* Pixora - Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        box-sizing: border-box;
+    }
+
+    .container,
+    .login-container,
+    .login-card {
+        width: 90%;
+        max-width: 420px;
+        margin: 20px auto;
+        padding: 24px 20px;
+        box-sizing: border-box;
+    }
+
+    input,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    input {
+        padding: 13px;
+        margin-bottom: 12px;
+    }
+
+    button {
+        padding: 14px;
+    }
+}
