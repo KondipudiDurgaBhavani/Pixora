@@ -588,7 +588,12 @@ body {
     }
 
     body {
-        padding: 20px 12px;
+         padding: 24px 12px !important;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         box-sizing: border-box;
     }
 
     input,
