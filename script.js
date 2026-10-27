@@ -1,31 +1,55 @@
 const loginForm = document.getElementById("loginForm");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const togglePasswordButton = document.getElementById("togglePassword");
 const message = document.getElementById("message");
+function showMessage(text, type) {
+    message.textContent = text;
+    message.className = `message visible ${type}`;
+}
+// Show or hide password
+togglePasswordButton.addEventListener("click", function () {
+    const isPasswordHidden = passwordInput.type === "password";
+
+    passwordInput.type = isPasswordHidden ? "text" : "password";
+
+    togglePasswordButton.setAttribute(
+        "aria-label",
+        isPasswordHidden ? "Hide password" : "Show password"
+    );
+});
+// Demo login only — does not authenticate real accounts
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
-    const username = document.getElementById("username").value.trim();
-    if (!username) {
-        message.textContent = "Please enter your username or email.";
-        message.style.color = "#8B1E3F";
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+    if (!username || !password) {
+        showMessage("Please enter your username and password.", "error");
         return;
     }
-    message.textContent =
-        "Welcome to Pixora! This is a demo login page.";
-    message.style.color = "#722F37";
+    showMessage(
+        "Welcome to Pixora! This is a demo login. Real account authentication is not connected yet.",
+        "success"
+    );
 });
-document.getElementById("guestLogin").addEventListener("click", function () {
-    message.textContent =
-        "Welcome to Pixora! Your social world is coming soon.";
-    message.style.color = "#722F37";
+// Explore Pixora
+document.getElementById("exploreButton").addEventListener("click", function () {
+    showMessage(
+        "Welcome to Pixora! Your Home Feed is the next feature to build.",
+        "success"
+    );
 });
-document.getElementById("forgotPassword").addEventListener("click", function (event) {
-    event.preventDefault();
-    message.textContent =
-        "Password recovery is not available in this demo yet.";
-    message.style.color = "#722F37";
+// Forgot password
+document.getElementById("forgotPassword").addEventListener("click", function () {
+    showMessage(
+        "Password recovery will be available after secure authentication is connected.",
+        "error"
+    );
 });
-document.getElementById("createAccount").addEventListener("click", function (event) {
-    event.preventDefault();
-    message.textContent =
-        "Account creation is coming soon to Pixora!";
-    message.style.color = "#722F37";
+// Create account
+document.getElementById("createAccount").addEventListener("click", function () {
+    showMessage(
+        "Account creation will be available after registration is implemented.",
+        "error"
+    );
 });
