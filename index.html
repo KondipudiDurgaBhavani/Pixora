@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Instagram</title>
-  <link rel="stylesheet" href="./style.css">
-  <script> scr="./script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixora | Your Style, Your Moments</title>
+    <link rel="stylesheet" href="./insta.css">
 </head>
 <body>
-  <table>
-   <tr>
-      <td>
-            <img src="https://www.pngall.com/wp-content/uploads/15/Instagram-Symbol-PNG-File.png" alt="instagram logo" width="300px">
-      </td>
-    </tr>
-    <tr>
-        <td>
-              <input type="text" id="username" placeholder="Phone number, username, or email">
-        </td>
-    </tr>
-    <tr>
-        <td>
-              <input type="password" id="password" placeholder="Password">
-          </div3>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <button onclick="login()">Log In</button>
-        </td>
-    </tr>
-     <tr>
-        <td>
-          <p class="b">Forgot password?</p>
-        </td>
-      </tr>
-    <tr>
-        <td>
-          <p>--------------------------------OR------------------------------</p>
-        </td>
-    </tr>
-      <tr>
-        <td>
-          <p class="d">Log in with Facebook</p>
-        </td>
-      </tr>
-       <tr>
-        <td>
-             <p class="e">create new account</p>
-        </td>
-    </tr>
-  <script src="insta.js"></script>
+    <main class="login-container">
+        <div class="brand">
+            <h1>pixora<span>.</span></h1>
+            <p>Your style, your moments.</p>
+        </div>
+        <div class="login-card">
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Sign in to continue to your world.</p>
+            <form id="loginForm">
+                <label for="username">Username or Email</label>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username or email"
+                    required
+                >
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+                <div class="forgot-row">
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+                <p id="message" class="message" role="status"></p>
+            </form>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <button type="button" class="guest-btn" id="guestLogin">
+                Explore Pixora
+            </button>
+            <p class="signup-text">
+                New to Pixora?
+                <a href="#" id="createAccount">Create an account</a>
+            </p>
+        </div>
+        <footer>
+            Made with care, just for your moments. ♡
+        </footer>
+    </main>
+    <script src="./insta.js"></script>
 </body>
 </html>
-
