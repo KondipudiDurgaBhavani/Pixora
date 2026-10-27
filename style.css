@@ -1,92 +1,71 @@
-body {
-  font-family:sans-serif;
-  background: white;
-}
-.a {
-  text-align: center;
-}
-
-input {
-  width: 90%;
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --wine: #722F37;
     --burgundy: #8B1E3F;
-    --dark-wine: #4A1725;
+    --dark-wine: #401820;
     --cream: #FFF8F2;
     --white: #FFFFFF;
-    --text: #33252A;
-    --muted: #8B7A7E;
-    --border: #E9D9D8;
+    --text: #39272B;
+    --muted: #88777B;
+    --border: #E8D8D8;
 }
-
 body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: var(--cream);
     color: var(--text);
 }
-
 .login-container {
-    width: 100%;
     min-height: 100vh;
+    width: 100%;
+    padding: 35px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 35px 20px;
+    align-items: center;
 }
-
 .brand {
     text-align: center;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 }
-
 .brand h1 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 52px;
-    letter-spacing: 1px;
     color: var(--wine);
+    letter-spacing: 1px;
 }
-
 .brand h1 span {
     color: var(--burgundy);
 }
-
 .brand p {
-    margin-top: 7px;
-    font-size: 14px;
+    margin-top: 8px;
     color: var(--muted);
-    letter-spacing: 0.5px;
+    font-size: 14px;
 }
-
 .login-card {
     width: 100%;
     max-width: 410px;
-    padding: 36px;
+    padding: 35px;
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 18px;
-    box-shadow: 0 12px 40px rgba(74, 23, 37, 0.08);
+    box-shadow: 0 12px 35px rgba(64, 24, 32, 0.10);
 }
-
 .login-card h2 {
-    font-size: 25px;
-    color: var(--dark-wine);
     text-align: center;
+    color: var(--dark-wine);
+    font-size: 25px;
 }
-
 .subtitle {
-    margin: 10px 0 28px;
     text-align: center;
     color: var(--muted);
     font-size: 14px;
     line-height: 1.5;
+    margin: 10px 0 25px;
 }
 
 form label {
@@ -96,43 +75,29 @@ form label {
     font-weight: bold;
     color: var(--dark-wine);
 }
-
 form input {
+    display: block;
     width: 100%;
-    padding: 13px 14px;
+    padding: 13px;
     border: 1px solid var(--border);
     border-radius: 9px;
     background: #FFFCFA;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
 }
-
 form input:focus {
     border-color: var(--wine);
     box-shadow: 0 0 0 3px rgba(114, 47, 55, 0.10);
 }
-
 .forgot-row {
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
     margin: 13px 0 20px;
 }
-
-a {
+.forgot-row a {
     color: var(--wine);
+    font-size: 13px;
     text-decoration: none;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
-.forgot-row a {
-    font-size: 13px;
-    font-weight: bold;
-}
-
 .login-btn,
 .guest-btn {
     width: 100%;
@@ -141,31 +106,32 @@ a:hover {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: 0.2s;
 }
-
 .login-btn {
-    color: var(--white);
-    border: none;
+    color: white;
     background: linear-gradient(135deg, var(--wine), var(--burgundy));
-    box-shadow: 0 5px 14px rgba(114, 47, 55, 0.18);
+    border: none;
+    box-shadow: 0 5px 12px rgba(114, 47, 55, 0.18);
 }
-
+.guest-btn {
+    color: var(--wine);
+    background: white;
+    border: 1px solid var(--wine);
+}
 .login-btn:hover,
 .guest-btn:hover {
     transform: translateY(-2px);
-    opacity: 0.92;
+    opacity: 0.9;
 }
-
 .divider {
     display: flex;
     align-items: center;
     gap: 14px;
     margin: 24px 0;
-    color: #A99A9C;
+    color: var(--muted);
     font-size: 12px;
 }
-
 .divider::before,
 .divider::after {
     content: "";
@@ -173,96 +139,38 @@ a:hover {
     flex: 1;
     background: var(--border);
 }
-
-.guest-btn {
-    background: var(--white);
-    border: 1px solid var(--wine);
-    color: var(--wine);
-}
-
 .signup-text {
-    margin-top: 25px;
+    margin-top: 24px;
     text-align: center;
     color: var(--muted);
     font-size: 13px;
     line-height: 1.8;
 }
-
 .signup-text a {
+    color: var(--wine);
     font-weight: bold;
+    text-decoration: none;
 }
-
 .message {
     margin-top: 12px;
     text-align: center;
     font-size: 13px;
     line-height: 1.5;
 }
-
 footer {
-    margin-top: 25px;
+    margin-top: 24px;
     color: var(--muted);
-    font-size: 12px;
     text-align: center;
+    font-size: 12px;
 }
-
 @media (max-width: 480px) {
     .login-container {
         padding: 25px 16px;
     }
-
     .brand h1 {
         font-size: 44px;
     }
-
     .login-card {
-        padding: 27px 21px;
-        border-radius: 14px;
-    }
-
-    .login-card h2 {
-        font-size: 23px;
+        padding: 26px 20px;
     }
 }
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #fafafa;
-  border: 1px solid #dbdbdb;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background: #0095f6;
-  border: none;
-  color: rgb(36, 31, 31);
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-}
-.d {
-    margin-left: 100px;
-  color: #385185;
-  font-weight: bold;
-  cursor: pointer;
-}
-.e{
-    margin-left: 100px;
-    color: #0095f6;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.b {
-  font-size: 12px;
-  margin-top: 15px;
-  color: #d61861;
-  cursor: pointer;
-}
-.f{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 60px;
-}
-
