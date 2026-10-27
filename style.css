@@ -492,3 +492,64 @@ body {
         padding: 14px;
     }
 }
+/* Input field wrapper */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e4d5d8;
+    border-radius: 12px;
+    padding: 0 14px;
+    background: #fffdfc;
+    transition: 0.3s ease;
+    margin: 10px 0 22px;
+}
+
+/* Wine-colour icons */
+.input-icon {
+    flex-shrink: 0;
+    color: #6d1f35;
+}
+
+/* Input styling */
+.input-wrapper input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 16px 0;
+    font-size: 15px;
+    color: #35121e;
+}
+
+/* Focus effect */
+.input-wrapper:focus-within {
+    border-color: #6d1f35;
+    box-shadow: 0 0 0 4px rgba(109, 31, 53, 0.08);
+}
+
+/* Show/hide password button */
+.password-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: #6d1f35;
+    cursor: pointer;
+    box-shadow: none;
+    transform: none;
+}
+
+.password-toggle:hover {
+    background: transparent;
+    box-shadow: none;
+    transform: scale(1.08);
+}
