@@ -606,4 +606,22 @@ body {
         max-width: 100%;
         height: auto;
     }
+    .container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .logo {
+        margin-top: 0 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 24px 18px;
+        box-sizing: border-box;
+    }
 }
