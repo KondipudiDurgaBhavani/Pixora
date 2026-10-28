@@ -1,1 +1,854 @@
-:root{--wine:#661b2b;--dark:#43101c;--rose:#8d3548;--gold:#c49a68;--cream:#fff9f5;--text:#482a27;--muted:#8a7169;--border:#eedfda;--paper:#fffdfb;--shadow:0 18px 55px #56232b17}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--text);font-family:Poppins,sans-serif}a{text-decoration:none;color:inherit}button,input{font:inherit;cursor:pointer}.topbar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:28px;padding:16px clamp(16px,4vw,60px);background:#fff9f5f2;backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}.brand{position:relative;flex-shrink:0;color:var(--wine);font:700 31px/1 'Playfair Display',serif;letter-spacing:-1.5px}.brand>span,.footbrand span{color:var(--gold)}.brand small{position:absolute;top:35px;left:18px;width:150px;color:var(--muted);font:8px Poppins,sans-serif;letter-spacing:.2px}.search{display:flex;align-items:center;gap:9px;flex:1;min-width:120px;max-width:520px;padding:8px 9px 8px 15px;border:1px solid var(--border);border-radius:50px;background:white;color:var(--muted)}.search>span{font-size:25px}.search input{width:100%;min-width:0;border:0;outline:0;background:transparent;font-size:12px;color:var(--text)}.search button{border:0;border-radius:50px;padding:9px 15px;background:var(--wine);color:white;font-size:11px}.topbar nav{display:flex;align-items:center;gap:18px;flex-shrink:0}.topbar nav>a:not(.avatar){font-size:12px;color:var(--muted)}.topbar nav .active{color:var(--wine)!important}.outline{border:1px solid var(--wine);border-radius:50px;padding:9px 14px;background:transparent;color:var(--wine);font-size:11px}.outline:hover{background:var(--wine);color:white}.avatar{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--wine),var(--rose));color:white;font:600 14px 'Playfair Display',serif}main{max-width:1440px;margin:auto;padding:0 clamp(17px,4vw,60px)}.hero{display:grid;grid-template-columns:.95fr 1.05fr;gap:35px;align-items:center;padding:55px 0 48px}.eyebrow{color:var(--rose);font-size:9px;font-weight:600;letter-spacing:1.8px}.hero h1{margin:18px 0;color:var(--dark);font:600 clamp(40px,5vw,68px)/1.08 'Playfair Display',serif;letter-spacing:-1.5px}h1 em,h2 em{color:var(--rose);font-weight:500}.intro{max-width:420px;color:var(--muted);font-size:13px;line-height:1.9}.primary{display:inline-flex;align-items:center;justify-content:center;gap:16px;margin-top:14px;padding:13px 19px;border:0;border-radius:7px;background:linear-gradient(110deg,var(--dark),var(--rose));box-shadow:0 7px 18px #661b2b29;color:white;font-size:11px}.primary:hover{transform:translateY(-1px)}.collage{position:relative;height:350px}.pic{position:absolute;object-fit:cover;border:7px solid var(--paper);border-radius:120px 120px 12px 12px;box-shadow:var(--shadow)}.pic1{left:5%;top:8%;width:39%;height:78%;transform:rotate(-5deg)}.pic2{right:6%;top:1%;width:38%;height:67%;transform:rotate(5deg)}.pic3{right:23%;bottom:0;width:32%;height:48%;border-radius:12px;transform:rotate(3deg)}.note{position:absolute;left:37%;top:39%;padding:14px 19px;border:1px solid #c49a684d;border-radius:8px;background:#fff9f5f2;box-shadow:var(--shadow);color:var(--wine);font:600 16px/1.35 'Playfair Display',serif}.note strong{display:block}.section{padding:26px 0 30px;border-top:1px solid var(--border)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px}.section-head .eyebrow{margin:0 0 8px}.section h2,.banner h2{margin:0;color:var(--dark);font:600 clamp(26px,3vw,36px)/1.2 'Playfair Display',serif}.muted{color:var(--muted);font-size:11px;line-height:1.8}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.chip{padding:10px 16px;border:1px solid var(--border);border-radius:50px;background:white;color:var(--muted);font-size:11px}.chip.selected,.chip:hover{border-color:var(--wine);background:var(--wine);color:white}.inspiration{padding-top:30px;padding-bottom:60px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 18px;margin-top:22px;align-items:start}.card{min-width:0}.photo{position:relative;height:220px;overflow:hidden;border-radius:10px;background:#f0e3dd}.photo.tall{height:275px}.photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}.card:hover .photo img{transform:scale(1.04)}.save{position:absolute;right:9px;top:9px;border:0;border-radius:50px;padding:8px 11px;background:#fffdfbf2;color:var(--wine);font-size:10px}.save.saved{background:var(--wine);color:white}.card>small{display:block;margin-top:12px;color:var(--rose);font-size:8px;font-weight:600;letter-spacing:1.4px}.card h3{margin:5px 0;color:var(--text);font:600 17px/1.35 'Playfair Display',serif}.card p{margin:0;color:var(--muted);font-size:10px;line-height:1.6}.empty{text-align:center;padding:35px;color:var(--muted)}.banner{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:5px 0 55px;padding:clamp(24px,4vw,42px);border:1px solid #f0dfd6;border-radius:14px;background:radial-gradient(circle at 90% 10%,#f4e2d8,transparent 40%),#f9eee8}.banner .eyebrow{margin-top:0}.banner .muted{max-width:480px}.banner .primary{flex-shrink:0}footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:25px clamp(17px,4vw,60px);border-top:1px solid var(--border);background:#fffdfb}footer p,footer small,footer div a{color:var(--muted);font-size:10px}footer div{display:flex;gap:18px}.footbrand{color:var(--wine);font:700 25px 'Playfair Display',serif}dialog{width:min(92vw,420px);padding:32px;border:1px solid var(--border);border-radius:14px;background:var(--cream);color:var(--text);box-shadow:0 25px 90px #320f1966}dialog::backdrop{background:#28101566;backdrop-filter:blur(3px)}dialog h2{color:var(--wine);font:600 29px 'Playfair Display',serif}dialog p:not(.eyebrow){color:var(--muted);font-size:12px;line-height:1.8}.close{float:right;border:0;background:transparent;color:var(--wine);font-size:24px}@media(max-width:1000px){.topbar{gap:16px}.topbar nav{gap:11px}.hero{gap:20px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:700px){.topbar{flex-wrap:wrap;gap:12px;padding:14px 16px}.brand{font-size:28px}.brand small{top:31px}.search{order:3;flex-basis:100%;max-width:none}.topbar nav{margin-left:auto;gap:9px}.topbar nav>a:not(.avatar){font-size:10px}.outline{padding:8px 10px;font-size:10px}.avatar{width:30px;height:30px}main{padding:0 17px}.hero{grid-template-columns:1fr;gap:8px;padding:38px 0 32px}.hero h1{font-size:clamp(39px,11vw,54px)}.intro{font-size:12px}.collage{height:270px}.section-head{align-items:start;flex-direction:column;gap:7px}.chips{gap:8px}.chip{padding:9px 13px;font-size:10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px}.photo,.photo.tall{height:auto;aspect-ratio:4/5}.card h3{font-size:15px}.card p{font-size:9px}.save{right:6px;top:6px;padding:7px 9px;font-size:9px}.banner{align-items:start;flex-direction:column;margin-bottom:35px;padding:24px 20px}footer{justify-content:center;flex-direction:column;text-align:center;gap:8px}}@media(max-width:380px){.topbar nav{gap:6px}.topbar nav>a:not(.avatar){font-size:9px}.outline{padding:7px}.grid{gap:20px 10px}}
+/* ========================================
+   PIXORA HOME PAGE
+   Theme: Wine, Rose, Gold & Cream
+======================================== */
+
+:root {
+    --wine: #661b2b;
+    --dark: #43101c;
+    --rose: #8d3548;
+    --gold: #c49a68;
+    --cream: #fff9f5;
+    --text: #482a27;
+    --muted: #8a7169;
+    --border: #eedfda;
+    --paper: #fffdfb;
+    --shadow: 0 18px 55px #56232b17;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   TOP NAVIGATION BAR
+======================================== */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding: 16px clamp(16px, 4vw, 60px);
+
+    background: #fff9f5f2;
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* Pixora Logo */
+
+.brand {
+    position: relative;
+    flex-shrink: 0;
+
+    color: var(--wine);
+    font: 700 31px/1 "Playfair Display", serif;
+    letter-spacing: -1.5px;
+}
+
+.brand > span,
+.footbrand span {
+    color: var(--gold);
+}
+
+.brand small {
+    position: absolute;
+    top: 35px;
+    left: 18px;
+
+    width: 150px;
+
+    color: var(--muted);
+    font: 8px "Poppins", sans-serif;
+    letter-spacing: 0.2px;
+}
+
+/* Search Bar */
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    flex: 1;
+    min-width: 120px;
+    max-width: 520px;
+
+    padding: 8px 9px 8px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 50px;
+
+    background: white;
+    color: var(--muted);
+}
+
+.search > span {
+    font-size: 25px;
+}
+
+.search input {
+    width: 100%;
+    min-width: 0;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.search button {
+    padding: 9px 15px;
+
+    border: 0;
+    border-radius: 50px;
+
+    background: var(--wine);
+    color: white;
+    font-size: 11px;
+}
+
+/* Navigation Links */
+
+.topbar nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+.topbar nav > a:not(.avatar) {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.topbar nav .active {
+    color: var(--wine) !important;
+}
+
+/* Outline Button */
+
+.outline {
+    padding: 9px 14px;
+
+    border: 1px solid var(--wine);
+    border-radius: 50px;
+
+    background: transparent;
+    color: var(--wine);
+    font-size: 11px;
+
+    transition: 0.25s ease;
+}
+
+.outline:hover {
+    background: var(--wine);
+    color: white;
+}
+
+/* Profile Avatar */
+
+.avatar {
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--wine),
+        var(--rose)
+    );
+
+    color: white;
+    font: 600 14px "Playfair Display", serif;
+}
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(17px, 4vw, 60px);
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 35px;
+
+    padding: 55px 0 48px;
+}
+
+.eyebrow {
+    color: var(--rose);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+}
+
+.hero h1 {
+    margin: 18px 0;
+
+    color: var(--dark);
+    font: 600 clamp(40px, 5vw, 68px)/1.08
+        "Playfair Display", serif;
+
+    letter-spacing: -1.5px;
+}
+
+h1 em,
+h2 em {
+    color: var(--rose);
+    font-weight: 500;
+}
+
+.intro {
+    max-width: 420px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* Primary Button */
+
+.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    margin-top: 14px;
+    padding: 13px 19px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: linear-gradient(
+        110deg,
+        var(--dark),
+        var(--rose)
+    );
+
+    box-shadow: 0 7px 18px #661b2b29;
+
+    color: white;
+    font-size: 11px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px #661b2b35;
+}
+
+/* ========================================
+   HERO IMAGE COLLAGE
+======================================== */
+
+.collage {
+    position: relative;
+    height: 350px;
+}
+
+.pic {
+    position: absolute;
+
+    object-fit: cover;
+
+    border: 7px solid var(--paper);
+    border-radius: 120px 120px 12px 12px;
+
+    box-shadow: var(--shadow);
+}
+
+.pic1 {
+    top: 8%;
+    left: 5%;
+
+    width: 39%;
+    height: 78%;
+
+    transform: rotate(-5deg);
+}
+
+.pic2 {
+    top: 1%;
+    right: 6%;
+
+    width: 38%;
+    height: 67%;
+
+    transform: rotate(5deg);
+}
+
+.pic3 {
+    right: 23%;
+    bottom: 0;
+
+    width: 32%;
+    height: 48%;
+
+    border-radius: 12px;
+
+    transform: rotate(3deg);
+}
+
+/* Floating Note */
+
+.note {
+    position: absolute;
+    top: 39%;
+    left: 37%;
+
+    padding: 14px 19px;
+
+    border: 1px solid #c49a684d;
+    border-radius: 8px;
+
+    background: #fff9f5f2;
+    box-shadow: var(--shadow);
+
+    color: var(--wine);
+    font: 600 16px/1.35 "Playfair Display", serif;
+}
+
+.note strong {
+    display: block;
+}
+
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
+
+.section {
+    padding: 26px 0 30px;
+    border-top: 1px solid var(--border);
+}
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.section-head .eyebrow {
+    margin: 0 0 8px;
+}
+
+.section h2,
+.banner h2 {
+    margin: 0;
+
+    color: var(--dark);
+    font: 600 clamp(26px, 3vw, 36px)/1.2
+        "Playfair Display", serif;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   CATEGORY FILTER CHIPS
+======================================== */
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+.chip {
+    padding: 10px 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 50px;
+
+    background: white;
+    color: var(--muted);
+    font-size: 11px;
+
+    transition: 0.25s ease;
+}
+
+.chip.selected,
+.chip:hover {
+    border-color: var(--wine);
+    background: var(--wine);
+    color: white;
+}
+
+/* ========================================
+   INSPIRATION / HOME FEED
+======================================== */
+
+.inspiration {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+/* Responsive Card Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    gap: 28px 18px;
+
+    margin-top: 22px;
+}
+
+.card {
+    min-width: 0;
+}
+
+/* Card Image */
+
+.photo {
+    position: relative;
+
+    height: 220px;
+    overflow: hidden;
+
+    border-radius: 10px;
+    background: #f0e3dd;
+}
+
+.photo.tall {
+    height: 275px;
+}
+
+.photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.card:hover .photo img {
+    transform: scale(1.04);
+}
+
+/* Save Button */
+
+.save {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+
+    padding: 8px 11px;
+
+    border: 0;
+    border-radius: 50px;
+
+    background: #fffdfbf2;
+    color: var(--wine);
+    font-size: 10px;
+}
+
+.save.saved {
+    background: var(--wine);
+    color: white;
+}
+
+/* Card Text */
+
+.card > small {
+    display: block;
+
+    margin-top: 12px;
+
+    color: var(--rose);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+}
+
+.card h3 {
+    margin: 5px 0;
+
+    color: var(--text);
+    font: 600 17px/1.35 "Playfair Display", serif;
+}
+
+.card p {
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.empty {
+    padding: 35px;
+
+    color: var(--muted);
+    text-align: center;
+}
+
+/* ========================================
+   BOTTOM PROMOTIONAL BANNER
+======================================== */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    margin: 5px 0 55px;
+    padding: clamp(24px, 4vw, 42px);
+
+    border: 1px solid #f0dfd6;
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            #f4e2d8,
+            transparent 40%
+        ),
+        #f9eee8;
+}
+
+.banner .eyebrow {
+    margin-top: 0;
+}
+
+.banner .muted {
+    max-width: 480px;
+}
+
+.banner .primary {
+    flex-shrink: 0;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    padding: 25px clamp(17px, 4vw, 60px);
+
+    border-top: 1px solid var(--border);
+    background: #fffdfb;
+}
+
+footer p,
+footer small,
+footer div a {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+footer div {
+    display: flex;
+    gap: 18px;
+}
+
+.footbrand {
+    color: var(--wine);
+    font: 700 25px "Playfair Display", serif;
+}
+
+/* ========================================
+   DIALOG / POPUP
+======================================== */
+
+dialog {
+    width: min(92vw, 420px);
+    padding: 32px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: var(--cream);
+    color: var(--text);
+
+    box-shadow: 0 25px 90px #320f1966;
+}
+
+dialog::backdrop {
+    background: #28101566;
+    backdrop-filter: blur(3px);
+}
+
+dialog h2 {
+    color: var(--wine);
+    font: 600 29px "Playfair Display", serif;
+}
+
+dialog p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.close {
+    float: right;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--wine);
+    font-size: 24px;
+}
+
+/* ========================================
+   TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 1000px) {
+    .topbar {
+        gap: 16px;
+    }
+
+    .topbar nav {
+        gap: 11px;
+    }
+
+    .hero {
+        gap: 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 700px) {
+    /* Navigation */
+
+    .topbar {
+        flex-wrap: wrap;
+        gap: 12px;
+
+        padding: 14px 16px;
+    }
+
+    .brand {
+        font-size: 28px;
+    }
+
+    .brand small {
+        top: 31px;
+    }
+
+    .search {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none;
+    }
+
+    .topbar nav {
+        margin-left: auto;
+        gap: 9px;
+    }
+
+    .topbar nav > a:not(.avatar) {
+        font-size: 10px;
+    }
+
+    .outline {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Main Layout */
+
+    main {
+        padding: 0 17px;
+    }
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        padding: 38px 0 32px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 11vw, 54px);
+    }
+
+    .intro {
+        font-size: 12px;
+    }
+
+    .collage {
+        height: 270px;
+    }
+
+    /* Section Headings */
+
+    .section-head {
+        align-items: start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    /* Categories */
+
+    .chips {
+        gap: 8px;
+    }
+
+    .chip {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+
+    /* Home Feed Cards */
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 12px;
+    }
+
+    .photo,
+    .photo.tall {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .card h3 {
+        font-size: 15px;
+    }
+
+    .card p {
+        font-size: 9px;
+    }
+
+    .save {
+        top: 6px;
+        right: 6px;
+
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    /* Promotional Banner */
+
+    .banner {
+        align-items: start;
+        flex-direction: column;
+
+        margin-bottom: 35px;
+        padding: 24px 20px;
+    }
+
+    /* Footer */
+
+    footer {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+
+        text-align: center;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 380px) {
+    .topbar nav {
+        gap: 6px;
+    }
+
+    .topbar nav > a:not(.avatar) {
+        font-size: 9px;
+    }
+
+    .outline {
+        padding: 7px;
+    }
+
+    .grid {
+        gap: 20px 10px;
+    }
+}
