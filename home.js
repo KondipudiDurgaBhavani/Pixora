@@ -54,9 +54,14 @@ categoryButtons.forEach(
     document.getElementById('okDialog').addEventListener('click',()=>dialog.close());
     document.getElementById('year').textContent=new Date().getFullYear();filterCards();
 const username = sessionStorage.getItem("pixoraUser");
-
 const welcomeUser = document.getElementById("welcomeUser");
-
 if (welcomeUser && username) {
 welcomeUser.textContent = `Welcome, ${username}!`;
+}
+// Display the signed-in user's initial
+const pixoraUser = sessionStorage.getItem("pixoraUser");
+const profileAvatar = document.getElementById("profileAvatar");
+if (pixoraUser && profileAvatar) {
+    profileAvatar.textContent = pixoraUser.charAt(0).toUpperCase();
+    profileAvatar.title = pixoraUser;
 }
