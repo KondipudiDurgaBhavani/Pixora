@@ -19,7 +19,7 @@ togglePasswordButton.addEventListener("click", function () {
     );
 });
 const loginForm = document.getElementById("loginForm");
-const usernameInput = document.getElementById("username");
+const usernameInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const message = document.getElementById("message");
 
@@ -29,8 +29,9 @@ loginForm.addEventListener("submit", function (event) {
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
 
-    if (username === "" || password === "") {
+    if (!username || !password) {
         message.textContent = "Please enter your username and password.";
+        message.className = "message visible error";
         return;
     }
 
