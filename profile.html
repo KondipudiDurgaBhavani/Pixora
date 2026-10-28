@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Pixora</title>
+    <link rel="stylesheet" href="./profile.css">
+    <script src="./profile.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="./home.html" class="logo">Pixora<span>.</span></a>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./saved.html">♥ Saved Posts</a>
+            <a href="./profile.html" class="active">My Profile</a>
+        </nav>
+    </header>
+    <main class="profile-container">
+        <section class="profile-banner">
+            <div class="banner-decoration decoration-one"></div>
+            <div class="banner-decoration decoration-two"></div>
+            <span class="banner-label">YOUR CREATIVE SPACE</span>
+            <h1>A little corner<br>that is <em>all yours.</em></h1>
+            <p>Your inspiration, your ideas, your Pixora.</p>
+        </section>
+        <section class="profile-card">
+            <div class="avatar" id="profileAvatar">P</div>
+            <span class="profile-label">PIXORA MEMBER</span>
+            <h2 id="profileName">Welcome, Creator!</h2>
+            <p class="profile-description">
+                Collecting inspiration, one idea at a time. ♡
+            </p>
+            <div class="profile-divider"></div>
+            <div class="profile-stats">
+                <div class="stat">
+                    <span class="stat-number" id="savedCount">0</span>
+                    <span class="stat-label">Saved Posts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Ideas to Explore</span>
+                </div>
+            </div>
+            <div class="profile-actions">
+                <a href="./saved.html" class="primary-btn">
+                    ♥ View Saved Posts
+                </a>
+                <a href="./home.html" class="secondary-btn">
+                    Explore Pixora →
+                </a>
+            </div>
+        </section>
+        <section class="profile-note">
+            <span class="note-icon">✦</span>
+            <h3>Keep collecting what inspires you.</h3>
+            <p>
+                Every saved idea becomes part of your personal
+                collection. Find inspiration and make it yours.
+            </p>
+        </section>
+        <div class="logout-section">
+            <button type="button" id="logoutButton" class="logout-btn">
+                Log Out
+            </button>
+        </div>
+    </main>
+    <footer>
+        <p>Made with ♥ by Pixora</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root {
+    --cream: #faf8f4;
+    --wine: #702b3a;
+    --wine-dark: #54202c;
+    --text: #292322;
+    --muted: #89817c;
+    --white: #ffffff;
+    --border: #e9e2dc;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.navbar {
+    min-height: 76px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.logo span {
+    color: var(--wine);
+}
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+.navbar nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.2s;
+}
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--wine);
+}
+.profile-container {
+    width: min(900px, 90%);
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+.profile-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 55px 35px;
+    background: #f0e8df;
+    border-radius: 4px;
+}
+.banner-label {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--wine);
+}
+.profile-banner h1 {
+    position: relative;
+    z-index: 1;
+    margin: 20px 0 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1.15;
+    font-weight: 500;
+}
+.profile-banner h1 em {
+    color: var(--wine);
+    font-weight: 500;
+}
+.profile-banner p {
+    position: relative;
+    z-index: 1;
+    color: var(--muted);
+    font-size: 13px;
+}
+.banner-decoration {
+    position: absolute;
+    border: 1px solid rgba(112, 43, 58, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.decoration-one {
+    width: 260px;
+    height: 260px;
+    right: -50px;
+    top: -90px;
+}
+.decoration-two {
+    width: 190px;
+    height: 190px;
+    right: 30px;
+    top: 60px;
+}
+.profile-card {
+    position: relative;
+    max-width: 650px;
+    margin: -15px auto 0;
+    padding: 35px 30px 40px;
+    text-align: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: 0 15px 45px rgba(65, 35, 30, 0.05);
+}
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    background: var(--wine);
+    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 43px;
+    box-shadow: 0 0 0 1px var(--border);
+}
+.profile-label {
+    color: var(--wine);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+.profile-card h2 {
+    margin: 12px 0 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+.profile-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+.profile-divider {
+    width: 60px;
+    height: 1px;
+    margin: 28px auto;
+    background: var(--wine);
+    opacity: 0.45;
+}
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-bottom: 30px;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--wine);
+}
+.stat-label {
+    font-size: 11px;
+    color: var(--muted);
+}
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px;
+    border: 1px solid var(--wine);
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+.primary-btn {
+    background: var(--wine);
+    color: var(--white);
+}
+.primary-btn:hover {
+    background: var(--wine-dark);
+}
+.secondary-btn {
+    background: transparent;
+    color: var(--wine);
+}
+.secondary-btn:hover {
+    background: #f5eeeb;
+}
+.profile-note {
+    max-width: 500px;
+    margin: 45px auto 0;
+    text-align: center;
+}
+.note-icon {
+    color: var(--wine);
+    font-size: 25px;
+}
+.profile-note h3 {
+    margin: 12px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+.profile-note p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+.logout-section {
+    margin-top: 30px;
+    text-align: center;
+}
+.logout-btn {
+    padding: 10px 24px;
+    background: transparent;
+    color: var(--wine);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+.logout-btn:hover {
+    background: #f0e8df;
+}
+footer {
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 5%;
+        gap: 14px;
+    }
+    .navbar nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .navbar nav a {
+        font-size: 11px;
+    }
+    .profile-container {
+        width: 92%;
+        padding-top: 25px;
+    }
+    .profile-banner {
+        padding: 40px 22px;
+    }
+    .profile-card {
+        padding: 30px 18px;
+    }
+    .profile-card h2 {
+        font-size: 27px;
+    }
+    .profile-stats {
+        gap: 35px;
+    }
+    .stat-number {
+        font-size: 26px;
+    }
+    .profile-actions {
+        flex-direction: column;
+    }
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+    .profile-note h3 {
+        font-size: 21px;
+    }
+}
