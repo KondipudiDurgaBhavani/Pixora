@@ -18,7 +18,6 @@ togglePasswordButton.addEventListener("click", function () {
         isPasswordHidden ? "Hide password" : "Show password"
     );
 });
-// Demo login only — does not authenticate real accounts
 // Demo login — redirect to Pixora Home Page
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
