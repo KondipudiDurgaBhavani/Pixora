@@ -18,21 +18,24 @@ togglePasswordButton.addEventListener("click", function () {
         isPasswordHidden ? "Hide password" : "Show password"
     );
 });
-// Demo login — redirect to Pixora Home Page
+const loginForm = document.getElementById("loginForm");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const message = document.getElementById("message");
+
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
+
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
-    if (!username || !password) {
-        showMessage(
-            "Please enter your username and password.",
-            "error"
-        );
+
+    if (username === "" || password === "") {
+        message.textContent = "Please enter your username and password.";
         return;
     }
-    // Save the username for the demo home page
-    sessionStorage.setItem("pixoraUsername", username);
-    // Open the home page
+
+    sessionStorage.setItem("pixoraUser", username);
+
     window.location.href = "./home.html";
 });
 // Explore Pixora
