@@ -79,40 +79,48 @@ if (pixoraUser && profileAvatar) {
 }
 // Pixora Save Posts Feature
 document.addEventListener("DOMContentLoaded", function () {
-    const saveButtons = document.querySelectorAll(".save");
+    const saveButtons = document.querySelectorAll(".card .save");
 
-    let savedPosts = JSON.parse(localStorage.getItem("pixoraSavedPosts")) || [];
+    let savedPosts = JSON.parse(
+        localStorage.getItem("pixoraSavedPosts") || "[]"
+    );
 
-    saveButtons.forEach(function (button, index) {
-        const card = button.closest(".inspiration-card, .trend-card, article");
-
+    saveButtons.forEach(function (button) {
+        const card = button.closest(".card");
         if (!card) return;
 
-        const postId = card.dataset.postId || `pixora-post-${index}`;
+        // Use the post title as a unique identifier
+        const title = card.querySelector("h3")?.textContent.trim();
+        if (!title) return;
 
-        card.dataset.postId = postId;
-
-        // Restore previously saved state
-        if (savedPosts.includes(postId)) {
+        // Restore saved state
+        if (savedPosts.includes(title)) {
             button.textContent = "♥ Saved";
             button.classList.add("saved");
             button.setAttribute("aria-pressed", "true");
         } else {
+            button.textContent = "♡ Save";
+            button.classList.remove("saved");
             button.setAttribute("aria-pressed", "false");
         }
 
-        // Save or unsave a post
+        // Avoid registering duplicate click handlers
+        if (button.dataset.saveInitialized === "true") return;
+        button.dataset.saveInitialized = "true";
+
         button.addEventListener("click", function () {
-            if (savedPosts.includes(postId)) {
-                savedPosts = savedPosts.filter(function (id) {
-                    return id !== postId;
-                });
+            if (savedPosts.includes(title)) {
+                savedPosts = savedPosts.filter(
+                    function (savedTitle) {
+                        return savedTitle !== title;
+                    }
+                );
 
                 button.textContent = "♡ Save";
                 button.classList.remove("saved");
                 button.setAttribute("aria-pressed", "false");
             } else {
-                savedPosts.push(postId);
+                savedPosts.push(title);
 
                 button.textContent = "♥ Saved";
                 button.classList.add("saved");
