@@ -100,3 +100,17 @@ if (createAccountButton) {
 }
 
 console.log("Pixora script loaded successfully!");
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    if (username && password) {
+        sessionStorage.setItem("pixoraUser", username);
+        window.location.href = "./home.html";
+    } else {
+        alert("Please enter your username and password.");
+    }
+});
+
