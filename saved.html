@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Posts | Pixora</title>
+    <link rel="stylesheet" href="./saved.css">
+    <script src="./saved.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <a href="./home.html" class="logo">Pixora<span>.</span></a>
+        <nav>
+            <a href="./home.html">Home</a>
+            <a href="./saved.html" class="active">Saved Posts</a>
+            <a href="./profile.html">My Profile</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="page-heading">
+            <span class="eyebrow">YOUR PERSONAL COLLECTION</span>
+            <h1>Your Saved <span>Ideas ❤️</span></h1>
+            <p>All the inspiration you love, collected in one place.</p>
+        </section>
+        <div class="saved-info">
+            <span id="savedCount">0 saved posts</span>
+            <a href="./home.html" class="explore-btn">＋ Explore Ideas</a>
+        </div>
+        <section id="savedGrid" class="saved-grid"></section>
+        <section id="emptyState" class="empty-state" hidden>
+            <div class="empty-icon">♡</div>
+            <h2>No saved posts yet!</h2>
+            <p>Explore Pixora and save your favourite ideas here.</p>
+            <a href="./home.html" class="explore-btn">Explore Pixora</a>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ♥ by Pixora</p>
+    </footer>
+</body>
+</html>
