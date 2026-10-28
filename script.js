@@ -38,10 +38,7 @@ loginForm.addEventListener("submit", function (event) {
 });
 // Explore Pixora
 document.getElementById("exploreButton").addEventListener("click", function () {
-    showMessage(
-        "Welcome to Pixora! Your Home Feed is the next feature to build.",
-        "success"
-    );
+    showMessage(window.location.href = "./home.html");
 });
 // Forgot password
 document.getElementById("forgotPassword").addEventListener("click", function () {
