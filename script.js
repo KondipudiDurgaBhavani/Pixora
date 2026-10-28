@@ -19,18 +19,22 @@ togglePasswordButton.addEventListener("click", function () {
     );
 });
 // Demo login only — does not authenticate real accounts
+// Demo login — redirect to Pixora Home Page
 loginForm.addEventListener("submit", function (event) {
     event.preventDefault();
     const username = usernameInput.value.trim();
     const password = passwordInput.value;
     if (!username || !password) {
-        showMessage("Please enter your username and password.", "error");
+        showMessage(
+            "Please enter your username and password.",
+            "error"
+        );
         return;
     }
-    showMessage(
-        "Welcome to Pixora! This is a demo login. Real account authentication is not connected yet.",
-        "success"
-    );
+    // Save the username for the demo home page
+    sessionStorage.setItem("pixoraUsername", username);
+    // Open the home page
+    window.location.href = "./home.html";
 });
 // Explore Pixora
 document.getElementById("exploreButton").addEventListener("click", function () {
