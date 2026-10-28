@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff9f5">
+<title>Pixora | Discover Inspiration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./home.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./home.html">✦ pixora<span>.</span><small>Your style, your moments.</small></a>
+  <form class="search" id="searchForm"><span>⌕</span><input id="searchInput" type="search" placeholder="Search ideas, styles, inspiration..." aria-label="Search inspiration"><button>Search</button></form>
+  <nav><a class="active" href="./home.html">Home</a><a href="#explore">Explore</a><button class="outline" id="createButton">＋ Create</button><a class="avatar" href="#profile" aria-label="Profile">P</a></nav>
+</header>
+<main>
+<section class="hero">
+ <div class="hero-copy"><p class="eyebrow">✦ A LITTLE INSPIRATION, EVERY DAY</p><h1>Find your next<br><em>beautiful idea.</em></h1><p class="intro">A space for the things you love, the looks you save, and the moments that inspire you.</p><a class="primary" href="#explore">Explore inspiration <b>→</b></a></div>
+ <div class="collage"><img class="pic pic1" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=85" alt="Fashion inspiration"><img class="pic pic2" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Interior inspiration"><img class="pic pic3" src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85" alt="Art inspiration"><div class="note">✦<strong>Collect what<br>moves you.</strong></div></div>
+</section>
+<section id="explore" class="section"><div class="section-head"><div><p class="eyebrow">EXPLORE YOUR WORLD</p><h2>What inspires you?</h2></div><p class="muted">Choose a mood and find something lovely.</p></div>
+<div class="chips"><button class="chip selected" data-category="All">✦ All ideas</button><button class="chip" data-category="Fashion">Fashion</button><button class="chip" data-category="Beauty">Beauty</button><button class="chip" data-category="Interiors">Interiors</button><button class="chip" data-category="Art">Art & design</button><button class="chip" data-category="Lifestyle">Lifestyle</button></div></section>
+<section class="section inspiration"><div class="section-head"><div><p class="eyebrow">HANDPICKED FOR YOUR MOOD</p><h2>Trending inspiration</h2></div><span class="muted" id="resultCount">8 ideas</span></div>
+<div class="grid" id="ideaGrid">
+<article class="card" data-category="Fashion" data-search="fashion neutral outfit capsule wardrobe style"><div class="photo tall"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85" alt="Fashion outfit" loading="lazy"><button class="save">♡ Save</button></div><small>FASHION</small><h3>Everyday, effortlessly styled</h3><p>Soft neutrals and timeless pieces</p></article>
+<article class="card" data-category="Interiors" data-search="interior home decor cozy room plants"><div class="photo"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85" alt="Cozy interior" loading="lazy"><button class="save">♡ Save</button></div><small>INTERIORS</small><h3>A slower kind of living</h3><p>Warm textures, calm corners</p></article>
+<article class="card" data-category="Beauty" data-search="beauty skincare makeup natural glow"><div class="photo tall"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=700&q=85" alt="Beauty inspiration" loading="lazy"><button class="save">♡ Save</button></div><small>BEAUTY</small><h3>Your natural glow ritual</h3><p>Little moments of self-care</p></article>
+<article class="card" data-category="Art" data-search="art design illustration color creative studio"><div class="photo"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=85" alt="Art supplies" loading="lazy"><button class="save">♡ Save</button></div><small>ART & DESIGN</small><h3>Make room for creativity</h3><p>Color, texture and playful ideas</p></article>
+<article class="card" data-category="Lifestyle" data-search="lifestyle coffee morning journal slow living"><div class="photo"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=85" alt="Coffee and morning" loading="lazy"><button class="save">♡ Save</button></div><small>LIFESTYLE</small><h3>Make mornings feel special</h3><p>A cozy start to your day</p></article>
+<article class="card" data-category="Fashion" data-search="fashion accessories bag outfit detail"><div class="photo tall"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=85" alt="Fashion accessories" loading="lazy"><button class="save">♡ Save</button></div><small>FASHION</small><h3>Details that tell a story</h3><p>Accessories with personality</p></article>
+<article class="card" data-category="Interiors" data-search="interiors minimalist bedroom linen natural light"><div class="photo"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=85" alt="Minimal bedroom" loading="lazy"><button class="save">♡ Save</button></div><small>INTERIORS</small><h3>A room to breathe</h3><p>Simple spaces, softer days</p></article>
+<article class="card" data-category="Lifestyle" data-search="lifestyle flowers botanical spring nature"><div class="photo"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=85" alt="Fresh flowers" loading="lazy"><button class="save">♡ Save</button></div><small>LIFESTYLE</small><h3>Bring a little nature in</h3><p>Fresh flowers, fresh perspective</p></article>
+</div><p id="emptyState" class="empty" hidden>No ideas found. Try another search or category.</p></section>
+<section class="banner" id="profile"><div><p class="eyebrow">YOUR IDEAS BELONG HERE</p><h2>Save a moment.<br><em>Share an inspiration.</em></h2><p class="muted">Start building your own collection of things that feel like you.</p></div><button class="primary" id="bannerCreate">＋ Create your first post</button></section>
+</main>
+<footer><a class="footbrand" href="./home.html">pixora<span>.</span></a><p>Your style, your moments. ♡</p><div><a href="#explore">Explore</a><a href="#profile">About Pixora</a><a href="mailto:hello@pixora.example">Contact</a></div><small>© <span id="year"></span> Pixora. Made with care.</small></footer>
+<dialog id="createDialog"><button class="close" id="closeDialog" aria-label="Close">×</button><p class="eyebrow">COMING SOON</p><h2>Your creative space</h2><p>This is a front-end preview. Real post uploads and saved posts need a backend or database.</p><button class="primary" id="okDialog">Sounds good</button></dialog>
+<script src="./home.js"></script>
+</body></html>
