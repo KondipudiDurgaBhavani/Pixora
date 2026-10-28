@@ -79,7 +79,7 @@ if (pixoraUser && profileAvatar) {
 }
 // Pixora Save Posts Feature
 document.addEventListener("DOMContentLoaded", function () {
-    const saveButtons = document.querySelectorAll(".save-button");
+    const saveButtons = document.querySelectorAll(".save");
 
     let savedPosts = JSON.parse(localStorage.getItem("pixoraSavedPosts")) || [];
 
