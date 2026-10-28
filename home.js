@@ -53,3 +53,10 @@ categoryButtons.forEach(
     document.getElementById('closeDialog').addEventListener('click',()=>dialog.close());
     document.getElementById('okDialog').addEventListener('click',()=>dialog.close());
     document.getElementById('year').textContent=new Date().getFullYear();filterCards();
+const username = sessionStorage.getItem("pixoraUser");
+
+const welcomeUser = document.getElementById("welcomeUser");
+
+if (welcomeUser && username) {
+welcomeUser.textContent = `Welcome, ${username}!`;
+}
