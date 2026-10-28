@@ -77,3 +77,52 @@ if (pixoraUser && profileAvatar) {
         `Profile: ${pixoraUser}`
     );
 }
+// Pixora Save Posts Feature
+document.addEventListener("DOMContentLoaded", function () {
+    const saveButtons = document.querySelectorAll(".save-button");
+
+    let savedPosts = JSON.parse(localStorage.getItem("pixoraSavedPosts")) || [];
+
+    saveButtons.forEach(function (button, index) {
+        const card = button.closest(".inspiration-card, .trend-card, article");
+
+        if (!card) return;
+
+        const postId = card.dataset.postId || `pixora-post-${index}`;
+
+        card.dataset.postId = postId;
+
+        // Restore previously saved state
+        if (savedPosts.includes(postId)) {
+            button.textContent = "♥ Saved";
+            button.classList.add("saved");
+            button.setAttribute("aria-pressed", "true");
+        } else {
+            button.setAttribute("aria-pressed", "false");
+        }
+
+        // Save or unsave a post
+        button.addEventListener("click", function () {
+            if (savedPosts.includes(postId)) {
+                savedPosts = savedPosts.filter(function (id) {
+                    return id !== postId;
+                });
+
+                button.textContent = "♡ Save";
+                button.classList.remove("saved");
+                button.setAttribute("aria-pressed", "false");
+            } else {
+                savedPosts.push(postId);
+
+                button.textContent = "♥ Saved";
+                button.classList.add("saved");
+                button.setAttribute("aria-pressed", "true");
+            }
+
+            localStorage.setItem(
+                "pixoraSavedPosts",
+                JSON.stringify(savedPosts)
+            );
+        });
+    });
+});
