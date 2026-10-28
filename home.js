@@ -98,6 +98,30 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
         const title = titleElement.textContent.trim();
+        const imageElement = card.querySelector("img");
+const categoryElement = card.querySelector("small");
+const descriptionElement = card.querySelector("p");
+
+let postDetails = {};
+
+try {
+    postDetails = JSON.parse(
+        localStorage.getItem("pixoraPostDetails") || "{}"
+    );
+} catch (error) {
+    postDetails = {};
+}
+
+postDetails[title] = {
+    image: imageElement ? imageElement.src : "",
+    category: categoryElement ? categoryElement.textContent.trim() : "PIXORA",
+    description: descriptionElement ? descriptionElement.textContent.trim() : ""
+};
+
+localStorage.setItem(
+    "pixoraPostDetails",
+    JSON.stringify(postDetails)
+);
         function updateSaveButton() {
             const isSaved = savedPosts.includes(title);
             button.textContent = isSaved ? "♥ Saved" : "♡ Save";
